@@ -1,0 +1,26 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>iCheck插件演示 | 黄杨的博客</title>
+	<link rel="stylesheet" type="text/css" href="skins/square/red.css">
+</head>
+<body>
+
+<p><input type="checkbox"></p>
+<p><input type="checkbox" checked></p>
+<p><input type="radio" name="iCheck"></p>
+<p><input type="radio" name="iCheck" checked></p>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="jquery.icheck.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('input').iCheck({
+    checkboxClass: 'icheckbox_square-red',
+    radioClass: 'iradio_square-red',
+    increaseArea: '20%' // optional
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh" manifest="/cache.manifest">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>HTML5 网页视频 Demo</title>
+        <meta name="description" content="在网页上播放视频的解决方案。">
+        <meta name="viewport" content="width=device-width">
+        <style type="text/css">
+          body {
+              margin: 0;
+              padding: 1em 0;
+              background-color: #f3f3f3;
+              font:14px/1.7 Arial, Helvetica, sans-serif;
+              color:#5a5a5a;
+              text-align: center
+          }
+          a {
+            color: #08c;
+            text-decoration: none
+          }
+          figure {
+              margin:2em auto;
+              width:320px;
+              clear:both
+          }
+          video, embed{
+            width: 320px
+          }
+        </style>
+        <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+    <header><h1>HTML5 Video Demo</h1></header>
+    <figure>
+     <video controls poster="http://huangyang.qiniudn.com/poster.jpg">
+       <source src="http://huangyang.qiniudn.com/video.mp4" type="video/mp4" />
+       <source src="http://huangyang.qiniudn.com/video.ogg" type="video/ogg"/>
+       <object>
+         <embed src="http://huangyang.qiniudn.com/flash-video.swf" type= "application/x-shockwave-flash" allowfullscreen="false" allowscriptaccess="always" />
+       </object>
+     </video>
+      <figcaption>HTML5视频+针对底版本浏览器的插件解决方案</figcaption>
+    </figure>
+    <footer>&copy; <a href="http://huangyang.me" title="黄杨的博客">huangyang.me</a></footer>
+    </body>
+</html>

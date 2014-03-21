@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>左图右内容的效果实现 | 黄杨的博客</title>
+        <meta name="description" content="黄杨的博客上的一些在线演示。">
+        <meta name="viewport" content="width=device-width">
+        <style type="text/css">
+          body {
+              margin: 0;
+              padding: 1em 0;
+              background-color: #f3f3f3;
+              font:16px/1.7 Arial, Helvetica, sans-serif;
+              color:#5a5a5a
+          }
+          a {
+            color: #08c;
+            text-decoration: none
+          }
+          header h1{
+                text-align:center
+            }
+          ul{margin: 0;padding: 0}
+          ul li{list-style: none;margin: 0;font-size: 13px;}
+          h3{line-height: 1.7;margin: 0}
+          .item .pic { float:left;margin-right:10px; }
+          .item .content { overflow:hidden;zoom:1; } /* 或用display:table-cell */
+        </style>
+        <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+    <header><h1>左图右内容的效果实现 <a href="http://huangyang.me/css-web-typography.html" title="前端笔试题：实现一个左图右内容的效果">huangyang.me</a></h1></header>
+    <div class="item">
+      <div class="pic">
+        <a href="http://huangyang.me/"><img src="http://huangyang.qiniudn.com/wp-content/uploads/2013/07/heart.png" alt="heart"></a>
+      </div>
+      <div class="content">
+        <h3><a href="">标题标题标题标题</a></h3>
+        <ul>
+          <li><a href="">内容内容内容内容1</a></li>
+          <li><a href="">内容内容内容内容2</a></li>
+          <li><a href="">内容内容内容内容3</a></li>
+          <li><a href="">内容内容内容内容4</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    </body>
+</html>

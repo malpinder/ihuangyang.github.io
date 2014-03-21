@@ -1,0 +1,15 @@
+CACHE MANIFEST
+#v1
+
+CACHE:
+index.html
+404.html
+favicon.ico
+robots.txt
+humans.txt
+apple-touch-icon.png
+css/normalize.min.css css/main.css
+css/bootmetro-icons.min.css
+img/pho-cat.jpg img/pho-huangshan.jpg
+
+NETWORK: *

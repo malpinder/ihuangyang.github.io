@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Pure CSS3 Pie Charts</title>
+<style>
+h1 {
+	color:#555;
+	font-size: 3em;
+	text-align: center
+}
+
+.chart {
+	position:absolute;top: 0;left: 0;right: 0;bottom: 0;
+	width:200px;
+	height:200px;
+	margin: auto
+}
+
+/*剪裁绝对定位元素*/
+.hold {
+	position:absolute;
+	width:200px;
+	height:200px;
+	clip:rect(0px,200px,200px,100px)
+}
+
+.pie {
+	position:absolute;
+	width:200px;
+	height:200px;
+	border: none;
+	clip:rect(0px,100px,200px,0px);
+	border-radius:100px;
+	-webkit-transition: background .2s linear;
+	transition: background .2s linear
+}
+
+/*起始位置*/
+#p-css {
+	-webkit-transform:rotate(0deg);
+	-ms-transform:rotate(0deg);
+	transform:rotate(0deg)
+}
+/*背景色&百分比*/
+#p-css .pie {
+	background-color:#E96633;
+	-webkit-transform:rotate(170deg);
+	-ms-transform:rotate(170deg);
+	transform:rotate(170deg)
+}
+/*hover样式*/
+#p-css .pie:hover{
+	background-color: #FF7038
+}
+
+#p-html {
+	-webkit-transform:rotate(170deg);
+	-ms-transform:rotate(170deg);
+	transform:rotate(170deg)
+}
+#p-html .pie {
+	background-color:#00B5AD;
+	-webkit-transform:rotate(150deg);
+	-ms-transform:rotate(150deg);
+	transform:rotate(150deg)
+}
+#p-html .pie:hover {
+	background-color:#009A93
+}
+
+#p-js {
+	-webkit-transform:rotate(320deg);
+	-ms-transform:rotate(320deg);
+	transform:rotate(320deg)
+}
+#p-js .pie {
+	background-color:#564F8A;
+	-webkit-transform:rotate(40deg);
+	-ms-transform:rotate(40deg);
+	transform:rotate(40deg)
+}
+#p-js .pie:hover {
+	background-color: #3E3773
+}
+</style>
+</head>
+<body>
+	<h1>纯CSS3实现饼图</h1>
+
+	<div class="chart" title="CSS">
+		<!-- p-css -->
+		<div id="p-css" class="hold">
+			<div class="pie"></div>
+		</div>
+		<!-- p-html -->
+		<div id="p-html" class="hold">
+			<div class="pie" title="HTML"></div>
+		</div>
+		<!-- p-js -->
+		<div id="p-js" class="hold">
+			<div class="pie" title="Javascript"></div>
+		</div>
+	</div>
+
+</body>
+</html>

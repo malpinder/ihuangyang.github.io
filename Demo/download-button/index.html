@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>醒目的下载按钮Demo | 黄杨的博客</title>
+        <meta name="description" content="黄杨的博客上的一些在线演示。">
+        <meta name="viewport" content="width=device-width">
+        <style type="text/css">
+        body{
+          margin: 0;padding: 10% 0 0;background-color: #0e5db0;
+          font-family: Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+          text-align: center;
+        }
+        /*基本按钮样式*/
+        .btn {
+        display: inline-block;
+        padding: 0px 8px;
+        font-weight: bold;
+        margin-bottom: 0;
+        font-size: 11px;
+        line-height: 22px;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        cursor: default;
+        color: #333333;
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+        background-color: #f3f3f3;
+        background-image: -moz-linear-gradient(top, #f5f5f5, #f1f1f1);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#f1f1f1));
+        background-image: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+        background-image: -o-linear-gradient(top, #f5f5f5, #f1f1f1);
+        background-image: linear-gradient(to bottom, #f5f5f5, #f1f1f1);
+        background-repeat: repeat-x;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#fff1f1f1', GradientType=0);
+        border-color: #e4e4e4;
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom-color: rgba(0, 0, 0, 0.1);
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        }
+        /*绿色按钮样式*/
+        .btn-success {
+        color: #ffffff;
+        text-shadow: 0 1px 0 #245700;
+        background-color: #3b9000;
+        background-image: -moz-linear-gradient(top, #3d9400, #398a00);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#3d9400), to(#398a00));
+        background-image: -webkit-linear-gradient(top, #3d9400, #398a00);
+        background-image: -o-linear-gradient(top, #3d9400, #398a00);
+        background-image: linear-gradient(to bottom, #3d9400, #398a00);
+        background-repeat: repeat-x;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3d9400', endColorstr='#ff398a00', GradientType=0);
+        border-color: #2e7100;
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+        }
+        /*动画*/
+        @-webkit-keyframes downloadButton {
+          from { -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(255,255,255,.5); }
+          50% {  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 20px rgba(255,255,255,.9); }
+          to {   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(255,255,255,.5); }
+        }
+        @keyframes downloadButton {
+          from { box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(255,255,255,.5); }
+          50% {  box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 20px rgba(255,255,255,.9); }
+          to {   box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(255,255,255,.5); }
+        }
+        /*动画按钮*/
+        .masthead {
+          padding: 14px 24px;
+          font-size: 24px;
+          font-weight: 200;
+          color: #fff;
+          border: 0;
+          -webkit-border-radius: 2px;
+                  border-radius: 2px;
+          -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(0,68,204,.01);
+                  box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(0,68,204,.01);
+          -webkit-animation: downloadButton 1.5s infinite;
+                  animation: downloadButton 1.5s infinite;
+          -webkit-transition: none;
+                  transition: none;
+        }
+        .masthead:active {
+          -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.1);
+                  box-shadow: inset 0 2px 4px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.1);
+        }
+        </style>
+    </head>
+    <body>
+    <a href="" class="btn btn-success masthead">Download</a>
+    </body>
+</html>

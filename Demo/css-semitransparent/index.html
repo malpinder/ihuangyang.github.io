@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>CSS半透明背景实现工具_黄杨的博客</title>
+<meta name="keywords" content="css透明背景,IE透明,黄杨的博客,CSS3透明,IE半透明,IE8透明背景,半透明背景,huangyang.me" />
+<meta name="description" content="这是一个CSS半透明背景的在线实现方案，方便生成CSS代码，兼容IE6+，Chrome，Firefox等浏览器。Coding:huangyang.me | Date:2013-08-07">
+<link href="style.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="http://huangyang.me/wp-content/themes/required/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<header><h1>CSS半透明背景实现方案</h1></header>
+<div id="main">
+  <div id="body" class="light">
+    <div id="content" class="show">
+      <div class="wrap">
+        <input type="text" id="class-name" value="样式名" placeholder="样式名" onfocus="this.value=''" onblur="if(!value){value=defaultValue;}" title="如：.head-bg">
+        #<input type="text" id="color_value" value="十六进制颜色值" placeholder="十六进制颜色值" maxlength="6" onfocus="this.value=''" onblur="if(!value){value=defaultValue;}" title="如：000000">
+        <input type="text" id="original" value="透明度" placeholder="透明度" onfocus="this.value=''" onblur="if(!value){value=defaultValue;}" title="如：0.5">
+        <button onclick="change_10_to_16()">生成代码</button>   
+        <div id="alpha_style"></div>
+
+        <section class="top_tips">
+          <h2>实现（半）透明背景效果的代码</h2>
+          <p>实现原理：低版本的IE浏览器使用渐变滤镜Gradient Filter，支持CSS3的浏览器使用rgba属性。</p>
+          <p>使用方法：输入 <strong>十六进制颜色值</strong> 及 <strong>透明度值</strong> ，点击 <strong>生成代码</strong> 。其会自动在IE的过渡滤镜以及CSS3中的rgba属性之间进行十六进制与十进制的换算。</p>
+          <h3>说明：</h3>
+          <ol>
+          <li>
+            <strong>样式名</strong>
+            <p>例如： <mark>.head-bg</mark> ，填样式名选项后会自动导出IE9的兼容方案，不填样式名直接输出样式属性，请自己写IE9的hack。单独把IE9的 <mark>filter</mark> 变成透明度为0即可。高级浏览器大部分支持 <mark>:root</mark> 伪类，但不支持filter属性，而IE只有IE9支持，所以我们可以这样写。代码如下：</p>
+          <pre>:root .rgba{filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#00000000', EndColorStr='#00000000');}</pre>
+        </li>
+          <li>
+            <strong>十六进制颜色值</strong>
+            <p>十六进制是从【0】到【9】以及【a】到【f】组合而成的，请检查你的颜色值是否为【三位】或者符合【十六进制的组合方式】。</p>
+          </li>
+          <li>
+            <strong>透明度</strong>
+            <p>透明度的值在【0】到【1】之间。如： <mark>0.5</mark> 。</p>
+          </li>
+          <div id="tip" onclick="this.style.display='none'" onmouseout="this.style.display='none'"></div>
+          <div id="tip_alphe" onclick="this.style.display='none'" onmouseout="this.style.display='none'"></div>
+        </ol>
+        <p><blockquote>★希望了解更多可查阅这篇文章：<a href="http://huangyang.me/css-translucent.html" target="_blank" title="来自黄杨的博客">CSS半透明背景的实现方案</a></blockquote></p>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>Copyright © 2013 <a href="http://huangyang.me/" target="_blank">黄杨的博客</a></footer>
+<script src="script.js"></script>
+<!-- 百度统计代码 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?bc1e98fb467fb348d9be8a95ce4f1f5f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

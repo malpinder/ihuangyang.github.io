@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>hello Javascript</title>
+        <meta name="viewport" content="width=device-width">
+        <style type="text/css">
+
+html {
+    color: #444333;
+    background: #fff;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-rendering: optimizelegibility;
+}
+body, ul, ol, li, h1{
+    margin: 0;
+    padding: 0;
+}
+body{
+	margin: 3% 0 0 5%;
+    font:500 1.25em/1.8 Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+h1 {
+	color: #555;
+}
+ul, ol {
+	margin: 0 0 10px 20px;
+    list-style: none;
+    font-size: .8em;
+}
+a:hover {
+    text-decoration: underline;
+}
+a {
+	color: #1abc9c;
+    text-decoration: none;
+}
+        </style>
+    </head>
+<body>
+	<h1>Hello Javascript</h1>
+	<div>
+		<a href="menu1.html" class="menuLink">开始</a>
+		<ul class="menu" id="menu1" style="display: none;">
+			<li><a href="chap02/script01.html">Hello World!</a></li>
+			<li><a href="chap02/script04.html">发出警告</a></li>
+			<li><a href="chap02/script05.html">确认用户的选择 - 条件语句</a></li>
+			<li><a href="chap02/script06.html">提示用户作出响应</a></li>
+			<li><a href="chap02/script07.html">用链接对用户进行重定向</a></li>
+		</ul>
+	</div>
+	<div>
+		<a href="menu2.html" class="menuLink">处理图像</a>
+		<ul class="menu" id="menu2" style="display: none;">
+			<li><a href="chap04/script01.html">创建翻转器</a></li>
+			<li><a href="chap04/script02.html">创建更有效的翻转器</a></li>
+			<li><a href="chap04/script04.html">由链接触发翻转器</a></li>
+			<li><a href="chap04/script05.html" title="将鼠标移动到其中一个图像上时，就会显示对这个图像的描述">多个链接触发一个翻转器</a></li>
+			<li><a href="chap04/script07.html">创建循环的广告条</a></li>
+			<li><a href="chap04/script08.html">创建带链接的循环的广告条</a></li>
+			<li><a href="chap04/script09.html" title="显示一个图像，并且让用户能够控制显示图像的进度">建立循环式幻灯片</a></li>
+			<li><a href="chap04/script10.html">显示随机图像</a></li>
+		</ul>
+	</div>
+	<div>
+		<a href="menu3.html" class="menuLink">表单处理</a>
+		<ul class="menu" id="menu3" style="display: none;">
+			<li><a href="chap06/script01.html" title="下拉菜单直接跳转">选择并转移导航菜单</a></li>
+			<li><a href="chap06/script02.html">动态地改变菜单</a></li>
+			<li><a href="chap06/script03.html">建立必须填写的字段</a></li>
+			<li><a href="chap06/script04.html">重复输入密码字段检查</a></li>
+			<li><a href="chap07/script01.html">用正则表达式验证电子邮件地址</a></li>
+			<li><a href="chap07/script02.html">验证文件名</a></li>
+		</ul>
+	</div>
+	<div>
+		<a href="menu4.html" class="menuLink">处理事件</a>
+		<ul class="menu" id="menu4" style="display: none;">
+			<li><a href="chap08/script10.html" title="键盘左右键切换幻灯片">onkeydown（键盘）事件</a></li>
+			<li><a href="chap08/script06.html" title="紧跟着的眼睛">onmousemove事件</a></li>
+		</ul>
+	</div>
+	<div>
+		<a href="menu5.html" class="menuLink">对象和 DOM</a>
+		<ul class="menu" id="menu5" style="display: none;">
+			<li><a href="chap10/script01.html" title="创建一个文本区域和一个提交按钮，让用户能够添加文本节点">添加节点</a></li>
+			<li><a href="chap10/script02.html" title="">删除节点</a></li>
+		</ul>
+	</div>
+
+	<div>
+		<a href="menu6.html" class="menuLink">建立动态页面</a>
+		<ul class="menu" id="menu6" style="display: none;">
+			<li><a href="chap11/script01.html" title="">在网页上显示当前日期</a></li>
+			<li><a href="chap11/script03.html" title="">根据时间对消息进行定制</a></li>
+			<li><a href="chap11/script05.html" title="">把24小时制转换为12小时制</a></li>
+			<li><a href="chap11/script06.html" title="">倒计时计时器</a></li>
+			<li><a href="chap11/script07.html" title="">隐藏和显示层</a></li>
+		</ul>
+	</div>
+
+	<div>
+		<a href="menu7.html" class="menuLink">JavaScript应用示例</a>
+		<ul class="menu" id="menu7" style="display: none;">
+			<li><a href="chap12/script01.html" title="">可折叠菜单</a></li>
+			<li><a href="chap12/script02.html" title="">下拉菜单</a></li>
+			<li><a href="chap12/script06.html" title="">柱状图生成器</a></li>
+			<li><a href="chap12/script07.html" title="切换网页字体大小">样式表切换器</a></li>
+		</ul>
+	</div>
+
+<script>
+window.onload = initAll;
+
+function initAll() {
+	var allLinks = document.getElementsByTagName("a");
+	
+	for (var i=0; i<allLinks.length; i++) {
+		if (allLinks[i].className.indexOf("menuLink") > -1) {
+			allLinks[i].onclick = toggleMenu;
+		}
+	}
+}
+
+function toggleMenu() {
+	var startMenu = this.href.lastIndexOf("/")+1;
+	var stopMenu = this.href.lastIndexOf(".");
+	var thisMenuName = this.href.substring(startMenu,stopMenu);
+
+	var thisMenu = document.getElementById(thisMenuName).style;
+	if (thisMenu.display == "block") {	
+		thisMenu.display = "none";
+	}
+	else {
+		thisMenu.display = "block";
+	}
+
+	return false;
+}
+</script>
+</body>
+</html>

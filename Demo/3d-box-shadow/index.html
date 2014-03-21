@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>css3立体效果阴影 | 黄杨的博客</title>
+        <meta name="description" content="css3立体效果阴影">
+        <meta name="viewport" content="width=device-width">
+        <style type="text/css">
+        body { margin: 0;padding: 0;background-color: #f3f3f3}
+        .box{
+          margin: auto;position: absolute;top: 0;left: 0;right: 0;bottom: 0;/*绝对居中*/
+          padding: 30px 40px;
+          width: 400px;height: 141px;background-color: #fff;box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        .box:before, .box:after {
+        content: '';
+        position: absolute;
+        z-index: -2;
+        bottom: 15px;
+        left: 20px;
+        width: 50%;
+        height: 20%;
+        border-radius: 10px/90px;
+        box-shadow: 0 15px 10px rgba(0,0,0,0.7);
+        -webkit-transform: rotate(-3deg);
+        -moz-transform: rotate(-3deg);
+        -ms-transform: rotate(-3deg);
+        -o-transform: rotate(-3deg);
+        transform: rotate(-3deg);
+        }
+        .box:after {
+        right: 20px;
+        left: auto;
+        -webkit-transform: rotate(3deg);
+        -moz-transform: rotate(3deg);
+        -ms-transform: rotate(3deg);
+        -o-transform: rotate(3deg);
+        transform: rotate(3deg);
+        }
+        </style>
+    </head>
+    <body>
+      <div class="box">
+        <img src="google.png" alt="google" width="400" height="141">
+      </div>
+    </body>
+</html>
