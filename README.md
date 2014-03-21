@@ -1,4 +1,7 @@
 ihuangyang.github.io
 ====================
 
-##我的简历
+# My Personal GitHub Pages
+
+- [My resume](http://ihuangyang.github.io/resume/)
+- [My code demoPage](http://ihuangyang.github.io/demo/)
