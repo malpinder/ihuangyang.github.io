@@ -5,7 +5,7 @@ ihuangyang.github.io/Demo
 
 ## [My code demoPage](http://ihuangyang.github.io/demo/)
 
-- [CSS3开场动画小效果](http://ihuangyang.github.io/Demo/css3-animation/index.html)
+- [CSS3开场动画小效果](css3-animation/index.html)
 
 CSS半透明背景实现方案
 使用Highcharts创建网页图表
