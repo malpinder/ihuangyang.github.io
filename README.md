@@ -1,7 +1,13 @@
 ihuangyang.github.io
 ====================
 
-# My Personal GitHub Pages
+# GitHub Pages
 
-- [My resume](/)
-- [My code demoPage](http://ihuangyang.github.io/demo/)
+已 CNAME 到域名 huangyang.me
+
+包含：
+
+/ 个人主页 http://huangyang.me
+
+- My Resume
+- [一些小 CodeDemo](http://ihuangyang.github.io/demo/)
